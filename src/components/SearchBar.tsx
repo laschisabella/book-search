@@ -10,12 +10,14 @@ export default function SearchBar() {
   };
 
   return (
-    <input 
-      type="text" 
-      value={searchValue} 
-      onChange={handleChange}
-      placeholder='Search for a book...'
-      className='w-4/6 px-5 py-3 mx-auto rounded-2xl outline-violet-600'
-    />
+    <div className="flex justify-center">
+      <input 
+        type="text" 
+        value={searchValue} 
+        onChange={handleChange}
+        placeholder='Search for a book...'
+        className='w-4/6 p-5 rounded-2xl outline-violet-600'
+      />
+    </div>
   );
 }
