@@ -1,7 +1,8 @@
 "use client"
 
 import { useBookContext } from "@/context/appContext";
-import { useEffect, useState, useCallback, useRef } from "react";
+import { ArrowUp,SmileySad } from "@phosphor-icons/react";
+import { useEffect, useState, useCallback } from "react";
 import BookItem from "./BookItem";
 import spinner from "public/spinner.png"
 import Image from "next/image";
@@ -75,11 +76,13 @@ export default function BookList() {
         :
         books.length === 0 && searchValue !== "" ? 
         <div className="flex flex-col items-center gap-5 mx-auto my-5">
+          <SmileySad  size={100} className="text-logopink-100"/>
           <h1 className="font-black text-center text-white uppercase">No book found!</h1>
         </div>
         :
         <div className="flex flex-col items-center gap-5 mx-auto my-5">
           <div className="arrowAnimation">
+            <ArrowUp  size={100} className="text-logopink-100"/>
           </div>
           <h1 className="font-black text-center text-white uppercase">Get started by searching for a title!</h1>
         </div>
